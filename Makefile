@@ -6,7 +6,7 @@ OPENCV_LD_FLAGS = -L $(OPENCV_ROOT)/lib64 -lopencv_core -lopencv_imgproc -lopenc
 
 CUDA_INCLUDEPATH=/usr/local/cuda/include
 
-NVCC_OPTS=-arch=sm_70 
+NVCC_OPTS=-arch=sm_60 
 GCC_OPTS=-std=c++11 -g -O3 -Wall 
 CUDA_LD_FLAGS=-L $(CUDA_ROOT)/lib64 -lcudart
 
@@ -20,4 +20,4 @@ imgray.o: im2Gray.cu im2Gray.h utils.h
 	$(NVCC) -c im2Gray.cu $(NVCC_OPTS)
 
 clean:
-	rm *.o gray
+	rm -rf *.o gray
