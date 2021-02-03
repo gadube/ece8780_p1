@@ -1,0 +1,301 @@
+Changing directories to /home/gdube/hpcgpu/ece8780_p1
+Running application: gray_60_16
+==623064== NVPROF is profiling process 623064, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+Finished kernel launch 
+PASSED!==623064== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==623064== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+385.54ms  88.223us                    -               -         -         -         -  1.0000MB  11.069GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+385.63ms  3.7440us            (32 32 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+385.66ms  20.672us                    -               -         -         -         -  256.00KB  11.810GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_16
+==623080== NVPROF is profiling process 623080, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+Finished kernel launch 
+PASSED!==623080== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==623080== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+375.69ms  1.4462ms                    -               -         -         -         -  7.3242MB  4.9458GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+377.15ms  19.743us           (100 75 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+377.20ms  148.90us                    -               -         -         -         -  1.8311MB  12.009GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_16
+==623096== NVPROF is profiling process 623096, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+Finished kernel launch 
+PASSED!==623096== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==623096== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+382.62ms  7.1715ms                    -               -         -         -         -  30.375MB  4.1362GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+389.81ms  68.095us          (216 144 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+389.92ms  2.5875ms                    -               -         -         -         -  7.5938MB  2.8660GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_16
+==623112== NVPROF is profiling process 623112, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+Finished kernel launch 
+PASSED!==623112== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==623112== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+374.46ms  32.415us                    -               -         -         -         -  351.56KB  10.343GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+374.50ms  2.5600us            (25 15 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+374.53ms  7.5520us                    -               -         -         -         -  87.891KB  11.099GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_16
+==623125== NVPROF is profiling process 623125, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+Finished kernel launch 
+PASSED!==623125== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_16 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==623125== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+374.79ms  50.048us                    -               -         -         -         -  564.73KB  10.761GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+374.85ms  3.1040us            (30 20 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+374.88ms  11.872us                    -               -         -         -         -  141.18KB  11.341GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_32
+==623139== NVPROF is profiling process 623139, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+Finished kernel launch 
+PASSED!==623139== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==623139== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+383.31ms  88.160us                    -               -         -         -         -  1.0000MB  11.077GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+383.40ms  3.4560us            (16 16 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+383.44ms  20.704us                    -               -         -         -         -  256.00KB  11.792GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_32
+==623155== NVPROF is profiling process 623155, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+Finished kernel launch 
+PASSED!==623155== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==623155== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.45ms  1.4453ms                    -               -         -         -         -  7.3242MB  4.9488GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+377.90ms  21.535us            (50 38 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+377.95ms  148.90us                    -               -         -         -         -  1.8311MB  12.009GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_32
+==623170== NVPROF is profiling process 623170, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+Finished kernel launch 
+PASSED!==623170== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==623170== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.92ms  6.5724ms                    -               -         -         -         -  30.375MB  4.5133GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+383.50ms  76.127us           (108 72 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+383.61ms  3.0288ms                    -               -         -         -         -  7.5938MB  2.4484GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_32
+==623186== NVPROF is profiling process 623186, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+Finished kernel launch 
+PASSED!==623186== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==623186== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.72ms  32.288us                    -               -         -         -         -  351.56KB  10.384GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+376.75ms  2.4960us             (13 8 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+376.78ms  7.5520us                    -               -         -         -         -  87.891KB  11.099GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_32
+==623202== NVPROF is profiling process 623202, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+Finished kernel launch 
+PASSED!==623202== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_32 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==623202== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.51ms  49.855us                    -               -         -         -         -  564.73KB  10.803GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+376.56ms  2.5920us            (15 10 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+376.59ms  11.936us                    -               -         -         -         -  141.18KB  11.280GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_4
+==623219== NVPROF is profiling process 623219, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+Finished kernel launch 
+PASSED!==623219== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==623219== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+374.83ms  88.223us                    -               -         -         -         -  1.0000MB  11.069GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+374.93ms  30.112us          (128 128 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+374.98ms  20.672us                    -               -         -         -         -  256.00KB  11.810GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_4
+==623235== NVPROF is profiling process 623235, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+Finished kernel launch 
+PASSED!==623235== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==623235== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+374.49ms  1.4298ms                    -               -         -         -         -  7.3242MB  5.0023GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+375.93ms  208.93us          (400 300 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+376.17ms  148.70us                    -               -         -         -         -  1.8311MB  12.025GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_4
+==623251== NVPROF is profiling process 623251, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+Finished kernel launch 
+PASSED!==623251== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==623251== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.24ms  6.5548ms                    -               -         -         -         -  30.375MB  4.5254GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+382.80ms  859.45us          (864 576 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+383.69ms  2.3658ms                    -               -         -         -         -  7.5938MB  3.1346GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_4
+==623267== NVPROF is profiling process 623267, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+Finished kernel launch 
+PASSED!==623267== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==623267== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+375.92ms  32.064us                    -               -         -         -         -  351.56KB  10.456GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+375.96ms  11.648us           (100 57 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+376.00ms  7.5520us                    -               -         -         -         -  87.891KB  11.099GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_4
+==623280== NVPROF is profiling process 623280, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+Finished kernel launch 
+PASSED!==623280== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_4 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==623280== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+375.57ms  50.015us                    -               -         -         -         -  564.73KB  10.768GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+375.62ms  17.632us           (119 77 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+375.68ms  11.904us                    -               -         -         -         -  141.18KB  11.311GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_8
+==623296== NVPROF is profiling process 623296, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+Finished kernel launch 
+PASSED!==623296== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==623296== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+383.28ms  87.903us                    -               -         -         -         -  1.0000MB  11.110GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+383.38ms  8.9920us            (64 64 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+383.42ms  20.704us                    -               -         -         -         -  256.00KB  11.792GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_8
+==623391== NVPROF is profiling process 623391, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+Finished kernel launch 
+PASSED!==623391== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==623391== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+373.21ms  1.4294ms                    -               -         -         -         -  7.3242MB  5.0040GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+374.65ms  54.655us          (200 150 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+374.73ms  148.80us                    -               -         -         -         -  1.8311MB  12.017GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_8
+==623406== NVPROF is profiling process 623406, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+Finished kernel launch 
+PASSED!==623406== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==623406== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.65ms  6.4383ms                    -               -         -         -         -  30.375MB  4.6073GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+383.10ms  217.76us          (432 288 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+383.34ms  3.1332ms                    -               -         -         -         -  7.5938MB  2.3669GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_8
+==623421== NVPROF is profiling process 623421, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+Finished kernel launch 
+PASSED!==623421== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==623421== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.41ms  32.160us                    -               -         -         -         -  351.56KB  10.425GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+376.45ms  4.3200us            (50 29 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+376.48ms  7.5200us                    -               -         -         -         -  87.891KB  11.146GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy
+Running application: gray_60_8
+==623434== NVPROF is profiling process 623434, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+Finished kernel launch 
+PASSED!==623434== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_60_8 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==623434== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+376.43ms  49.951us                    -               -         -         -         -  564.73KB  10.782GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
+376.49ms  5.9200us            (60 39 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+376.52ms  11.872us                    -               -         -         -         -  141.18KB  11.341GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

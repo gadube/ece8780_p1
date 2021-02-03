@@ -14,9 +14,6 @@ APPHOME='/home/gdube/hpcgpu/ece8780_p1'
 BUILDDIR="$APPHOME/build"
 echo "Changing directories to $APPHOME" && cd $APPHOME 
 
-# compile versions
-echo "Compiling Block Sizes and GPU versions" && sh compileall.sh
-
 # run and profile
 for prog in $(ls build/ |grep 35)
 do
