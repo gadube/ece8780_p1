@@ -1,13 +1,13 @@
 Changing directories to /home/gdube/hpcgpu/ece8780_p1
 Running application: gray_35_16
-==622576== NVPROF is profiling process 622576, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==188960== NVPROF is profiling process 188960, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
 Finished kernel launch 
-PASSED!==622576== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
-==622576== Profiling result:
+PASSED!==188960== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==188960== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-560.43ms  88.159us                    -               -         -         -         -  1.0000MB  11.077GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-560.52ms  3.8080us            (32 32 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-560.55ms  20.704us                    -               -         -         -         -  256.00KB  11.792GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+352.49ms  171.59us                    -               -         -         -         -  1.0000MB  5.6914GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+352.67ms  16.960us            (32 32 1)       (16 16 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+352.73ms  39.360us                    -               -         -         -         -  256.00KB  6.2028GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -15,14 +15,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_16
-==622594== NVPROF is profiling process 622594, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==188999== NVPROF is profiling process 188999, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
 Finished kernel launch 
-PASSED!==622594== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
-==622594== Profiling result:
+PASSED!==188999== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==188999== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-375.25ms  1.4720ms                    -               -         -         -         -  7.3242MB  4.8590GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-376.73ms  19.648us           (100 75 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-376.77ms  148.93us                    -               -         -         -         -  1.8311MB  12.007GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+343.46ms  2.1472ms                    -               -         -         -         -  7.3242MB  3.3311GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+345.62ms  116.55us           (100 75 1)       (16 16 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+345.78ms  314.43us                    -               -         -         -         -  1.8311MB  5.6869GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -30,14 +30,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_16
-==622610== NVPROF is profiling process 622610, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189036== NVPROF is profiling process 189036, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
 Finished kernel launch 
-PASSED!==622610== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
-==622610== Profiling result:
+PASSED!==189036== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189036== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-381.07ms  6.5596ms                    -               -         -         -         -  30.375MB  4.5221GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-387.64ms  67.743us          (216 144 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-387.74ms  2.4876ms                    -               -         -         -         -  7.5938MB  2.9811GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+342.96ms  10.061ms                    -               -         -         -         -  30.375MB  2.9484GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+353.03ms  469.28us          (216 144 1)       (16 16 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+353.55ms  3.4487ms                    -               -         -         -         -  7.5938MB  2.1503GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -45,14 +45,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_16
-==622626== NVPROF is profiling process 622626, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189076== NVPROF is profiling process 189076, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
 Finished kernel launch 
-PASSED!==622626== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
-==622626== Profiling result:
+PASSED!==189076== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189076== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-374.21ms  32.192us                    -               -         -         -         -  351.56KB  10.415GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-374.24ms  2.5600us            (25 15 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-374.27ms  7.5520us                    -               -         -         -         -  87.891KB  11.099GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+343.29ms  60.897us                    -               -         -         -         -  351.56KB  5.5056GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+343.36ms  7.8720us            (25 15 1)       (16 16 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+343.40ms  14.112us                    -               -         -         -         -  87.891KB  5.9396GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -60,14 +60,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_16
-==622639== NVPROF is profiling process 622639, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189094== NVPROF is profiling process 189094, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
 Finished kernel launch 
-PASSED!==622639== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
-==622639== Profiling result:
+PASSED!==189094== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_16 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189094== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-375.19ms  50.144us                    -               -         -         -         -  564.73KB  10.740GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-375.25ms  2.9760us            (30 20 1)       (16 16 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-375.28ms  11.904us                    -               -         -         -         -  141.18KB  11.311GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+339.38ms  95.745us                    -               -         -         -         -  564.73KB  5.6250GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+339.49ms  11.424us            (30 20 1)       (16 16 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+339.53ms  22.177us                    -               -         -         -         -  141.18KB  6.0712GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -75,14 +75,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_32
-==622656== NVPROF is profiling process 622656, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==189134== NVPROF is profiling process 189134, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
 Finished kernel launch 
-PASSED!==622656== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
-==622656== Profiling result:
+PASSED!==189134== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==189134== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-392.86ms  88.095us                    -               -         -         -         -  1.0000MB  11.085GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-392.96ms  3.4880us            (16 16 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-392.99ms  20.672us                    -               -         -         -         -  256.00KB  11.810GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+362.65ms  171.62us                    -               -         -         -         -  1.0000MB  5.6904GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+362.83ms  21.153us            (16 16 1)       (32 32 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+362.90ms  48.320us                    -               -         -         -         -  256.00KB  5.0526GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -90,14 +90,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_32
-==622672== NVPROF is profiling process 622672, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==189171== NVPROF is profiling process 189171, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
 Finished kernel launch 
-PASSED!==622672== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
-==622672== Profiling result:
+PASSED!==189171== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==189171== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-373.98ms  1.4422ms                    -               -         -         -         -  7.3242MB  4.9595GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-375.43ms  21.504us            (50 38 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-375.48ms  148.86us                    -               -         -         -         -  1.8311MB  12.012GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+338.06ms  2.1564ms                    -               -         -         -         -  7.3242MB  3.3169GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+340.23ms  150.24us            (50 38 1)       (32 32 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+340.42ms  289.57us                    -               -         -         -         -  1.8311MB  6.1752GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -105,14 +105,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_32
-==622688== NVPROF is profiling process 622688, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189210== NVPROF is profiling process 189210, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
 Finished kernel launch 
-PASSED!==622688== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
-==622688== Profiling result:
+PASSED!==189210== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189210== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-382.13ms  7.0828ms                    -               -         -         -         -  30.375MB  4.1880GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-389.22ms  75.039us           (108 72 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-389.33ms  3.1529ms                    -               -         -         -         -  7.5938MB  2.3521GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+343.08ms  9.8912ms                    -               -         -         -         -  30.375MB  2.9989GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+352.98ms  602.50us           (108 72 1)       (32 32 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+353.63ms  2.9250ms                    -               -         -         -         -  7.5938MB  2.5353GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -120,14 +120,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_32
-==622704== NVPROF is profiling process 622704, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189248== NVPROF is profiling process 189248, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
 Finished kernel launch 
-PASSED!==622704== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
-==622704== Profiling result:
+PASSED!==189248== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189248== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-374.03ms  32.320us                    -               -         -         -         -  351.56KB  10.374GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-374.07ms  2.5280us             (13 8 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-374.10ms  7.5200us                    -               -         -         -         -  87.891KB  11.146GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+341.25ms  60.896us                    -               -         -         -         -  351.56KB  5.5057GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+341.32ms  10.208us             (13 8 1)       (32 32 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+341.37ms  14.112us                    -               -         -         -         -  87.891KB  5.9396GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -135,14 +135,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_32
-==622720== NVPROF is profiling process 622720, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189268== NVPROF is profiling process 189268, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
 Finished kernel launch 
-PASSED!==622720== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
-==622720== Profiling result:
+PASSED!==189268== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_32 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189268== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-376.41ms  49.983us                    -               -         -         -         -  564.73KB  10.775GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-376.46ms  2.7840us            (15 10 1)       (32 32 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-376.50ms  11.872us                    -               -         -         -         -  141.18KB  11.341GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+344.85ms  96.065us                    -               -         -         -         -  564.73KB  5.6063GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+344.96ms  14.464us            (15 10 1)       (32 32 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+345.01ms  22.208us                    -               -         -         -         -  141.18KB  6.0627GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -150,14 +150,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_4
-==622734== NVPROF is profiling process 622734, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==189308== NVPROF is profiling process 189308, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
 Finished kernel launch 
-PASSED!==622734== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
-==622734== Profiling result:
+PASSED!==189308== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==189308== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-374.85ms  88.191us                    -               -         -         -         -  1.0000MB  11.073GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-374.95ms  30.080us          (128 128 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-375.00ms  20.704us                    -               -         -         -         -  256.00KB  11.792GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+344.68ms  171.97us                    -               -         -         -         -  1.0000MB  5.6787GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+344.86ms  96.609us          (128 128 1)         (4 4 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+345.02ms  39.329us                    -               -         -         -         -  256.00KB  6.2076GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -165,14 +165,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_4
-==622747== NVPROF is profiling process 622747, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==189347== NVPROF is profiling process 189347, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
 Finished kernel launch 
-PASSED!==622747== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
-==622747== Profiling result:
+PASSED!==189347== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==189347== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-374.59ms  1.4534ms                    -               -         -         -         -  7.3242MB  4.9213GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-376.05ms  208.96us          (400 300 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-376.29ms  148.70us                    -               -         -         -         -  1.8311MB  12.025GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+344.38ms  2.1220ms                    -               -         -         -         -  7.3242MB  3.3707GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+346.51ms  772.07us          (400 300 1)         (4 4 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+347.32ms  289.51us                    -               -         -         -         -  1.8311MB  6.1765GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -180,14 +180,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_4
-==622761== NVPROF is profiling process 622761, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189383== NVPROF is profiling process 189383, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
 Finished kernel launch 
-PASSED!==622761== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
-==622761== Profiling result:
+PASSED!==189383== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189383== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-374.16ms  6.4614ms                    -               -         -         -         -  30.375MB  4.5908GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-380.64ms  859.16us          (864 576 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-381.53ms  3.0161ms                    -               -         -         -         -  7.5938MB  2.4587GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+342.49ms  9.4168ms                    -               -         -         -         -  30.375MB  3.1500GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+351.91ms  3.1933ms          (864 576 1)         (4 4 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+355.15ms  3.1060ms                    -               -         -         -         -  7.5938MB  2.3876GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -195,14 +195,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_4
-==622777== NVPROF is profiling process 622777, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189423== NVPROF is profiling process 189423, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
 Finished kernel launch 
-PASSED!==622777== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
-==622777== Profiling result:
+PASSED!==189423== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189423== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-373.67ms  32.512us                    -               -         -         -         -  351.56KB  10.312GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-373.72ms  11.648us           (100 57 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-373.76ms  7.5840us                    -               -         -         -         -  87.891KB  11.052GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+339.31ms  61.184us                    -               -         -         -         -  351.56KB  5.4798GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+339.38ms  35.072us           (100 57 1)         (4 4 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+339.46ms  14.080us                    -               -         -         -         -  87.891KB  5.9531GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -210,14 +210,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_4
-==622790== NVPROF is profiling process 622790, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189442== NVPROF is profiling process 189442, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
 Finished kernel launch 
-PASSED!==622790== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
-==622790== Profiling result:
+PASSED!==189442== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_4 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189442== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-383.00ms  50.079us                    -               -         -         -         -  564.73KB  10.754GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-383.06ms  17.600us           (119 77 1)         (4 4 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-383.11ms  11.936us                    -               -         -         -         -  141.18KB  11.280GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+344.45ms  96.097us                    -               -         -         -         -  564.73KB  5.6044GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+344.56ms  55.425us           (119 77 1)         (4 4 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+344.66ms  22.208us                    -               -         -         -         -  141.18KB  6.0627GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -225,14 +225,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_8
-==622807== NVPROF is profiling process 622807, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==189482== NVPROF is profiling process 189482, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
 Finished kernel launch 
-PASSED!==622807== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
-==622807== Profiling result:
+PASSED!==189482== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/baboon_512_512.png ./grayimgs/graybaboon_512_512.png
+==189482== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-380.56ms  88.447us                    -               -         -         -         -  1.0000MB  11.041GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-380.66ms  8.9920us            (64 64 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-380.70ms  20.704us                    -               -         -         -         -  256.00KB  11.792GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+381.91ms  171.65us                    -               -         -         -         -  1.0000MB  5.6893GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+382.10ms  27.841us            (64 64 1)         (8 8 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+382.16ms  39.328us                    -               -         -         -         -  256.00KB  6.2078GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -240,14 +240,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_8
-==622902== NVPROF is profiling process 622902, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==189521== NVPROF is profiling process 189521, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
 Finished kernel launch 
-PASSED!==622902== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
-==622902== Profiling result:
+PASSED!==189521== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/doggo_1600_1200.jpeg ./grayimgs/graydoggo_1600_1200.jpeg
+==189521== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-376.80ms  1.4734ms                    -               -         -         -         -  7.3242MB  4.8545GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-378.28ms  54.559us          (200 150 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-378.36ms  148.86us                    -               -         -         -         -  1.8311MB  12.012GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+345.88ms  2.1307ms                    -               -         -         -         -  7.3242MB  3.3570GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+348.03ms  212.61us          (200 150 1)         (8 8 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+348.28ms  297.70us                    -               -         -         -         -  1.8311MB  6.0066GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -255,14 +255,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_8
-==622918== NVPROF is profiling process 622918, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189559== NVPROF is profiling process 189559, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
 Finished kernel launch 
-PASSED!==622918== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
-==622918== Profiling result:
+PASSED!==189559== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lemons_3456_2304.png ./grayimgs/graylemons_3456_2304.png
+==189559== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-379.39ms  6.5691ms                    -               -         -         -         -  30.375MB  4.5155GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-385.97ms  217.57us          (432 288 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-386.22ms  3.1296ms                    -               -         -         -         -  7.5938MB  2.3696GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+346.67ms  9.6129ms                    -               -         -         -         -  30.375MB  3.0858GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+356.30ms  873.41us          (432 288 1)         (8 8 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+357.22ms  3.8649ms                    -               -         -         -         -  7.5938MB  1.9188GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -270,14 +270,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_8
-==622934== NVPROF is profiling process 622934, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189604== NVPROF is profiling process 189604, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
 Finished kernel launch 
-PASSED!==622934== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
-==622934== Profiling result:
+PASSED!==189604== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/lena_400_225.jpeg ./grayimgs/graylena_400_225.jpeg
+==189604== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-374.58ms  32.352us                    -               -         -         -         -  351.56KB  10.363GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-374.62ms  4.4800us            (50 29 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-374.66ms  7.5520us                    -               -         -         -         -  87.891KB  11.099GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+342.93ms  60.833us                    -               -         -         -         -  351.56KB  5.5114GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+343.01ms  11.776us            (50 29 1)         (8 8 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+343.06ms  14.049us                    -               -         -         -         -  87.891KB  5.9662GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
@@ -285,14 +285,14 @@ DSMem: Dynamic shared memory allocated per CUDA block.
 SrcMemType: The type of source memory accessed by memory operation/copy
 DstMemType: The type of destination memory accessed by memory operation/copy
 Running application: gray_35_8
-==622947== NVPROF is profiling process 622947, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189627== NVPROF is profiling process 189627, command: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
 Finished kernel launch 
-PASSED!==622947== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
-==622947== Profiling result:
+PASSED!==189627== Profiling application: /home/gdube/hpcgpu/ece8780_p1/build/gray_35_8 ./testimgs/peppers_506_326.jpeg ./grayimgs/graypeppers_506_326.jpeg
+==189627== Profiling result:
    Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-376.51ms  49.920us                    -               -         -         -         -  564.73KB  10.789GB/s    Pageable      Device  Tesla V100-PCIE         1         7  [CUDA memcpy HtoD]
-376.57ms  5.8880us            (60 39 1)         (8 8 1)        16        0B        0B         -           -           -           -  Tesla V100-PCIE         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
-376.60ms  11.904us                    -               -         -         -         -  141.18KB  11.311GB/s      Device    Pageable  Tesla V100-PCIE         1         7  [CUDA memcpy DtoH]
+343.00ms  96.001us                    -               -         -         -         -  564.73KB  5.6100GB/s    Pageable      Device   Tesla K20m (0)         1         7  [CUDA memcpy HtoD]
+343.11ms  17.985us            (60 39 1)         (8 8 1)        10        0B        0B         -           -           -           -   Tesla K20m (0)         1         7  im2Gray(uchar4*, unsigned char*, int, int) [114]
+343.17ms  22.304us                    -               -         -         -         -  141.18KB  6.0366GB/s      Device    Pageable   Tesla K20m (0)         1         7  [CUDA memcpy DtoH]
 
 Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
 SSMem: Static shared memory allocated per CUDA block.
