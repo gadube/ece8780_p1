@@ -33,6 +33,7 @@ Makefile has been updated to use CUDA 11.0.3 module on Palmetto.
 
 ## Instructions to Build:
 `> source envvars.sh # adds modules`
+
 `> sh compileall.sh  # compiles all versions of prog. (block sizes: (4x4,8x8,116x16,32x32), sm_35,sm_60,sm_70)`
 
 NOTE: all executables are then found in the ./build directory.
