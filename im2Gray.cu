@@ -5,6 +5,9 @@
 #define BLOCK 32
 #endif
 
+#ifndef TILE_WIDTH
+#define TILE_WIDTH 4
+#endif
 
 /*
  
@@ -47,32 +50,36 @@ __global__
 void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 
 	__shared__ uchar4 ds_in[TILE_WIDTH][TILE_WIDTH];
-
-
+	__shared__ unsigned char ds_grey[TILE_WIDTH][TILE_WIDTH];
 
 	size_t x = blockIdx.x*blockDim.x + threadIdx.x;
 	size_t y = blockIdx.y*blockDim.y + threadIdx.y;
+	int i = y * numCols + x;
 
-	for(int p =0; p < numRows/TILE_WIDTH; ++p){
-		ds_in[threadIdx.y][threadIdx.x] =  d_in[y*numCols + p*TILE_WIDTH+threadIdx.x];
-		__syncthreads;
+	for(int p =0; p < numCols/TILE_WIDTH; ++p){
+		if (x < numCols && y < numRows) {
+			ds_in[threadIdx.y][threadIdx.x] =  d_in[y*numCols + p*TILE_WIDTH+threadIdx.x];
+		}
+		__syncthreads();
 
-		for(int j = 0; j < TILE_WIDTH; j++){
+		//for(int j = 0; j < TILE_WIDTH; j++){
 			if (x < numCols && y < numRows){
-				// gray pixel index
 
+				// gray pixel index
 				unsigned char r = ds_in[threadIdx.y][threadIdx.x].x; // red pixel value
 				unsigned char g = ds_in[threadIdx.y][threadIdx.x].y; // green pixel value
 				unsigned char b = ds_in[threadIdx.y][threadIdx.x].z; // blue pixel value
 
 				// grayscale conversion using formula 1 from project doc
-				//d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
-			}
+				ds_grey[threadIdx.y][threadIdx.x] = 0.299f*r + 0.587f * g + 0.114f * b;
+			//}
 
 		}
 		__syncthreads();
+		/*if (x < numCols && y < numRows) {
+			d_grey[i] = ds_grey[threadIdx.y][threadIdx.x];
+		}*/
 	}
-	d_grey[i] = 0.299f*r + 0.587f * g + 0.114f * b;
 	return;
 }
 
@@ -84,7 +91,7 @@ void launch_im2gray(uchar4 *d_in, unsigned char* d_grey, size_t numRows, size_t 
     dim3 block(BLOCK,BLOCK,1);
     dim3 grid((numCols + BLOCK - 1)/BLOCK,(numRows + BLOCK - 1)/BLOCK,1);
 
-    im2Gray<<<grid,block>>>(d_in, d_grey, numRows, numCols);
+    im2Gray_s<<<grid,block>>>(d_in, d_grey, numRows, numCols);
     cudaDeviceSynchronize();
     checkCudaErrors(cudaGetLastError());
     
