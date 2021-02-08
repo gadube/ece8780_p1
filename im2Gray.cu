@@ -52,26 +52,32 @@ void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 	__shared__ uchar4 ds_in[TILE_WIDTH][TILE_WIDTH];
 	__shared__ unsigned char ds_grey[TILE_WIDTH][TILE_WIDTH];
 
-	size_t x = blockIdx.x*blockDim.x + threadIdx.x;
-	size_t y = blockIdx.y*blockDim.y + threadIdx.y;
-	int i = y * numCols + x;
+
+	int bx = blockIdx.x;
+	int by = blockIdx.y;
+	int tx = threadIdx.x;
+	int ty = threadIdx.y;
+
+	size_t row = by * blockDim.y + ty;
+	size_t col = bx * blockDim.x + tx;
+	//int i = y * numCols + x;
 
 	for(int p =0; p < numCols/TILE_WIDTH; ++p){
-		if (x < numCols && y < numRows) {
-			ds_in[threadIdx.y][threadIdx.x] =  d_in[y*numCols + p*TILE_WIDTH+threadIdx.x];
-		}
+		//if (col < numCols && row < numRows) {
+			ds_in[ty][tx] =  d_in[row*numCols + p*TILE_WIDTH + tx];
+		//}
 		__syncthreads();
 
 		//for(int j = 0; j < TILE_WIDTH; j++){
-			if (x < numCols && y < numRows){
+			if (col < numCols && row < numRows){
 
 				// gray pixel index
-				unsigned char r = ds_in[threadIdx.y][threadIdx.x].x; // red pixel value
-				unsigned char g = ds_in[threadIdx.y][threadIdx.x].y; // green pixel value
-				unsigned char b = ds_in[threadIdx.y][threadIdx.x].z; // blue pixel value
+				unsigned char r = ds_in[ty][tx].x; // red pixel value
+				unsigned char g = ds_in[ty][tx].y; // green pixel value
+				unsigned char b = ds_in[ty][tx].z; // blue pixel value
 
 				// grayscale conversion using formula 1 from project doc
-				ds_grey[threadIdx.y][threadIdx.x] = 0.299f*r + 0.587f * g + 0.114f * b;
+				ds_grey[ty][tx] = 0.299f*r + 0.587f * g + 0.114f * b;
 			//}
 
 		}
