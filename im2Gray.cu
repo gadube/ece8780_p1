@@ -46,28 +46,41 @@ void im2Gray(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 __global__ 
 void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 
+	__shared__ uchar4 ds_in[TILE_WIDTH][TILE_WIDTH];
+
+
+
 	size_t x = blockIdx.x*blockDim.x + threadIdx.x;
 	size_t y = blockIdx.y*blockDim.y + threadIdx.y;
 
-	if (x < numCols && y < numRows)
-	{
-		// gray pixel index
-		int i = y * numCols + x;
+	for(int p =0; p < numRows/TILE_WIDTH; ++p){
+		ds_in[threadIdx.y][threadIdx.x] =  d_in[y*numCols + p*TILE_WIDTH+threadIdx.x];
+		__syncthreads;
 
-		unsigned char r = d_in[i].x; // red pixel value
-		unsigned char g = d_in[i].y; // green pixel value
-		unsigned char b = d_in[i].z; // blue pixel value
+		for(int j = 0; j < TILE_WIDTH; j++){
+			if (x < numCols && y < numRows){
+				// gray pixel index
 
-		// grayscale conversion using formula 1 from project doc
-		d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
+				unsigned char r = ds_in[threadIdx.y][threadIdx.x].x; // red pixel value
+				unsigned char g = ds_in[threadIdx.y][threadIdx.x].y; // green pixel value
+				unsigned char b = ds_in[threadIdx.y][threadIdx.x].z; // blue pixel value
+
+				// grayscale conversion using formula 1 from project doc
+				//d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
+			}
+
+		}
+		__syncthreads();
 	}
+	d_grey[i] = 0.299f*r + 0.587f * g + 0.114f * b;
 	return;
 }
 
 
 void launch_im2gray(uchar4 *d_in, unsigned char* d_grey, size_t numRows, size_t numCols){
     // configure launch params here 
-    
+
+
     dim3 block(BLOCK,BLOCK,1);
     dim3 grid((numCols + BLOCK - 1)/BLOCK,(numRows + BLOCK - 1)/BLOCK,1);
 
