@@ -43,6 +43,26 @@ void im2Gray(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 }
 
 
+__global__ 
+void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
+
+	size_t x = blockIdx.x*blockDim.x + threadIdx.x;
+	size_t y = blockIdx.y*blockDim.y + threadIdx.y;
+
+	if (x < numCols && y < numRows)
+	{
+		// gray pixel index
+		int i = y * numCols + x;
+
+		unsigned char r = d_in[i].x; // red pixel value
+		unsigned char g = d_in[i].y; // green pixel value
+		unsigned char b = d_in[i].z; // blue pixel value
+
+		// grayscale conversion using formula 1 from project doc
+		d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
+	}
+	return;
+}
 
 
 void launch_im2gray(uchar4 *d_in, unsigned char* d_grey, size_t numRows, size_t numCols){
