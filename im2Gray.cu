@@ -6,7 +6,7 @@
 #endif
 
 #ifndef TILE_WIDTH
-#define TILE_WIDTH 16
+#define TILE_WIDTH 32
 #endif
 
 /*
@@ -50,7 +50,6 @@ __global__
 void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 
 	__shared__ uchar4 ds_in[TILE_WIDTH][TILE_WIDTH];
-	__shared__ unsigned char ds_grey[TILE_WIDTH][TILE_WIDTH];
 
 
 	int bx = blockIdx.x;
@@ -60,18 +59,20 @@ void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 
 	size_t row = by * blockDim.y + ty;
 	size_t col = bx * blockDim.x + tx;
-	//int i = y * numCols + x;
+	int i = row * numCols + col;
 
 	if(col < numCols && row < numRows){
-	for(int p =0; p < numCols/TILE_WIDTH; ++p){
+//	for(int p =0; p < numCols/TILE_WIDTH; ++p){
 //		if (col < p * TILE_WIDTH + tx && row < numRows) {
 			//ds_in[ty][tx] = d_in[(p * TILE_WIDTH + ty) * numCols + col]; 
-			ds_in[ty][tx] =  d_in[row * numCols + (p * TILE_WIDTH + tx)];
+			int p = col / TILE_WIDTH;
+			if (col < numCols && row < numRows){
+			ds_in[ty][tx] =  d_in[row * numCols + col];
 //		}
-		__syncthreads();
+			__syncthreads();
 
-		for(int j = 0; j < TILE_WIDTH; j++){
-			if (col < p * TILE_WIDTH + tx && row < numRows){
+	//	for(int j = 0; j < TILE_WIDTH; j++){
+			
 
 				// gray pixel index
 				unsigned char r = ds_in[ty][tx].x; // red pixel value
@@ -79,16 +80,17 @@ void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 				unsigned char b = ds_in[ty][tx].z; // blue pixel value
 
 				// grayscale conversion using formula 1 from project doc
-				//ds_grey[ty][tx] = 0.299f*r + 0.587f * g + 0.114f * b;
+				d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
+				__syncthreads();
 			}
 
 			}
-		__syncthreads();
+			
 		/*if (x < numCols && y < numRows) {
 			d_grey[i] = ds_grey[threadIdx.y][threadIdx.x];
 		}*/
-	}
-	}
+	//}
+	//}
 	return;
 }
 
