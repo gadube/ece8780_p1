@@ -6,7 +6,7 @@
 #endif
 
 #ifndef TILE_WIDTH
-#define TILE_WIDTH 16
+#define TILE_WIDTH 64
 #endif
 
 /*
@@ -50,6 +50,7 @@ __global__
 void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 
 	__shared__ uchar4 ds_in[TILE_WIDTH][TILE_WIDTH];
+	unsigned char r, g, b;
 
 
 	int bx = blockIdx.x;
@@ -59,52 +60,28 @@ void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 
 	size_t row = by * blockDim.y + ty;
 	size_t col = bx * blockDim.x + tx;
-	//int i = row * numCols + col;
 
-	//if(col < numCols && row < numRows){
-		for(int p =0; p < (numCols-1)/TILE_WIDTH+1; ++p){
-			if (p * TILE_WIDTH + tx < numCols && row < numCols) {
-				//ds_in[ty][tx] = d_in[(p * TILE_WIDTH + ty) * numCols + col]; 
-				//int p = col / TILE_WIDTH;
-				//if (col < numCols && row < numRows){
-				//ds_in[ty][tx] =  d_in[row * numCols + p * TILE_WIDTH +tx ];
-				ds_in[ty][tx].x = 1;
-				//		}
-			} else {
-				//ds_in[ty][tx].x = 0;
-				//ds_in[ty][tx].y = 0;
-				//ds_in[ty][tx].z = 0;
-			}
+		if ((col < numCols) && (row < numRows)) {
+			ds_in[ty][tx] = d_in[row * numCols + col]; 
+		}
+		else {
+			ds_in[ty][tx].x = 0; 
+			ds_in[ty][tx].y = 0; 
+			ds_in[ty][tx].z = 0; 
+			ds_in[ty][tx].w = 0; 
+		}
+		__syncthreads();
 
-				__syncthreads();
-
-			if(row < numRows && col < numCols){
-
-				//add up the grayscale
-
-			}
-
-
-	//	for(int j = 0; j < TILE_WIDTH; j++){
-			
-
-				// gray pixel index
-				//unsigned char r = ds_in[ty][tx].x; // red pixel value
-				//unsigned char g = ds_in[ty][tx].y; // green pixel value
-				//unsigned char b = ds_in[ty][tx].z; // blue pixel value
-
-				// grayscale conversion using formula 1 from project doc
-				//d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
-			//	__syncthreads();
-			//}
-
-			}
-			
-		/*if (x < numCols && y < numRows) {
-			d_grey[i] = ds_grey[threadIdx.y][threadIdx.x];
-		}*/
-	//}
-	//}
+	if ((col < numCols) && (row < numRows)) {
+		r = ds_in[ty][tx].x; // red pixel value
+		g = ds_in[ty][tx].y; // green pixel value
+		b = ds_in[ty][tx].z; // blue pixel value
+	
+	// grayscale conversion using formula 1 from project doc
+		int i = row * numCols + col;
+		d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
+	}
+//	}	
 	return;
 }
 
