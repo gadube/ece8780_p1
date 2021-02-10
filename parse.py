@@ -15,11 +15,10 @@ size = []
 throughput = []
 name = []
 applicationstring = "Device Name,Input Image"
-KERNELNAMESIZE=7 #im2gray
 
 def parse_applications(line):
     applicationstring = ""
-    for i in range(0,3):
+    for i in range(0,4):
         if re.search("Profiling application",line):
             prog.append((re.search("gray_[0-9]+_[0-9]+",line)).group(0))
             blksz.append((re.search("[0-9]+$",prog[-1])).group(0))
@@ -38,9 +37,9 @@ def parse_nvprof(line):
         if len(line) > 20:
             devname.append(' '.join(line[15:17]))
             if len(line) > 25:
-                name.append(line[20][:KERNELNAMESIZE])
+                name.append(line[20][:-9])
             else:
-                name.append(line[19][:KERNELNAMESIZE])
+                name.append(line[19][:-9])
             start.append(line[0])
             if line[1][-2:] == "us":
                 num = float(line[1][:-2])

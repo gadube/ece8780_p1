@@ -6,7 +6,7 @@
 #endif
 
 #ifndef TILE_WIDTH
-#define TILE_WIDTH 64
+#define TILE_WIDTH BLOCK
 #endif
 
 /*
@@ -63,25 +63,17 @@ void im2Gray_s(uchar4 *d_in, unsigned char *d_grey, int numRows, int numCols){
 
 		if ((col < numCols) && (row < numRows)) {
 			ds_in[ty][tx] = d_in[row * numCols + col]; 
-		}
-		else {
-			ds_in[ty][tx].x = 0; 
-			ds_in[ty][tx].y = 0; 
-			ds_in[ty][tx].z = 0; 
-			ds_in[ty][tx].w = 0; 
-		}
-		__syncthreads();
 
-	if ((col < numCols) && (row < numRows)) {
-		r = ds_in[ty][tx].x; // red pixel value
-		g = ds_in[ty][tx].y; // green pixel value
-		b = ds_in[ty][tx].z; // blue pixel value
+			r = ds_in[ty][tx].x; // red pixel value
+			g = ds_in[ty][tx].y; // green pixel value
+			b = ds_in[ty][tx].z; // blue pixel value
+			//__syncthreads();
 	
-	// grayscale conversion using formula 1 from project doc
-		int i = row * numCols + col;
-		d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
+			// grayscale conversion using formula 1 from project doc
+			int i = row * numCols + col;
+			d_grey[i] = 0.299f * r + 0.587f * g + 0.114f * b;
 	}
-//	}	
+
 	return;
 }
 
@@ -93,6 +85,7 @@ void launch_im2gray(uchar4 *d_in, unsigned char* d_grey, size_t numRows, size_t 
     dim3 block(BLOCK,BLOCK,1);
     dim3 grid((numCols + BLOCK - 1)/BLOCK,(numRows + BLOCK - 1)/BLOCK,1);
 
+    im2Gray<<<grid,block>>>(d_in, d_grey, numRows, numCols);
     im2Gray_s<<<grid,block>>>(d_in, d_grey, numRows, numCols);
     cudaDeviceSynchronize();
     checkCudaErrors(cudaGetLastError());
